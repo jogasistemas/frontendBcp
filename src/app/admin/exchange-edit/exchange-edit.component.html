@@ -1,6 +1,6 @@
 <div class="columns">
     <div class="column is-10 is-offset-1" *ngIf="exchange">
         <h2 class="subtitle is-3 has-text-centered">Actualizar exchange</h2>
-        <app-task-form [model]="exchange" (completedform)="onSaveExchange($event)"></app-task-form>
+        <app-exchange-form [exchange]="exchange" [model]="currencies" (completedform)="onSaveExchange($event)"></app-exchange-form>
     </div>
 </div>

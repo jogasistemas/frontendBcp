@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import ExchangeR from 'src/app/models/exchangeR.model';
 import { ExchangeService } from '../services/exchange.service';
-import { pipe } from 'rxjs';
-import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-exchanges',
   templateUrl: './exchanges.component.html',

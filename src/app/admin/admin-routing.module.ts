@@ -11,12 +11,12 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       {
-        path: 'exchanges',
-        component: ExchangesComponent
-      },
-      {
         path: 'exchanges/new',
         component: ExchangeNewComponent
+      },
+      {
+        path: 'exchanges',
+        component: ExchangesComponent
       },
       {
         path: 'exchanges/:id',

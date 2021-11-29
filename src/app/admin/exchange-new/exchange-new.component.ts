@@ -3,6 +3,7 @@ import Exchange from 'src/app/models/exchange.model';
 import { ExchangeService } from '../services/exchange.service';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
+import Currency from 'src/app/models/currency.model';
 
 @Component({
   selector: 'app-exchange-new',
@@ -12,6 +13,7 @@ import { User } from 'src/app/models/user.model';
 export class ExchangeNewComponent implements OnInit {
 
   exchange: Exchange;
+  currencies: Currency[];
   users: User[];
   constructor(
     private router: Router,
@@ -25,6 +27,7 @@ export class ExchangeNewComponent implements OnInit {
       currencyOrigin: '',
       typeExchange:4.0
     };
+    this.currencies=[{currency:'S'},{currency:'D'}]
   }
 
   onSaveExchange(exchange: Exchange) {

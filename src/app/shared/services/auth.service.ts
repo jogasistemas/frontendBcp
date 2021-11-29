@@ -8,6 +8,7 @@ import { BehaviorSubject, Observable, of } from 'rxjs';
 export class AuthService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentUser: Observable<User>;
+  user:User;
 
   constructor(private userService: UserService) {
     this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(sessionStorage.getItem('currentUser')));
@@ -19,6 +20,13 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
+    console.log(username);
+    this.user={
+      user:username  
+    };
+    const constUser=this.user;
+    sessionStorage.setItem('currentUser', JSON.stringify(constUser));
+            this.currentUserSubject.next(constUser);
     return this.userService.getUser(username,password);
   }
 
