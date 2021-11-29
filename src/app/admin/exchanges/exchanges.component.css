@@ -1,0 +1,9 @@
+table th,
+table td {
+    text-align: center;
+}
+
+.button.is-small {
+    margin: 0.15rem 0.3rem;
+    width: 70px;
+}

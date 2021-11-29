@@ -1,0 +1,41 @@
+<div class="columns">
+    <div class="column is-10 is-offset-1">
+        <div class="level">
+            <div class="level-left">
+                <h2 class="subtitle is-3">
+                    Lista de exchanges
+                </h2>
+            </div>
+            <div class="level-right">
+                <a class="button is-info" [routerLink]="['./new']">Nueva Exchange</a>
+            </div>
+        </div>
+
+
+        <table class="table is-striped is-hoverable is-bordered is-fullwidth">
+            <thead>
+                <th *ngFor="let title of titlesTable">
+                    {{ title }}
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let exchange of exchangesR; let idx = index;">
+                    <td class="has-text-grey">{{ idx + 1 }}</td>
+                    <td class="has-text-grey">{{ exchange.amount }}</td>
+                    <td class="has-text-grey">{{ exchange.currencyOrigin }}</td>
+                    <td class="has-text-grey">{{ exchange.destinationCurrency }}</td>
+                    <td class="has-text-grey">{{ exchange.amountExchange }} </td>
+                    <td class="has-text-grey">{{ exchange.typeExchange }} </td>
+                    <td>
+                        <a class="button is-small is-danger" (click)="onDeleteExchange(exchange, $event)">
+                            Eliminar
+                        </a>
+                        <a class="button is-small is-info" [routerLink]="['./', exchange.id]">
+                            Editar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

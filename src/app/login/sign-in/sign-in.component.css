@@ -1,0 +1,21 @@
+form {
+    background: #FFF;
+    box-shadow: 3px 3px 1px rgba(181, 46, 49, 0.35);
+    border: 1px solid #e23237;
+    border-radius: 6px;
+    padding: 1.5em;
+}
+
+form .field {
+    margin-bottom: 1.3em;
+}
+
+form .label {
+    color: #363636;
+    font-weight: 600;
+}
+
+form .button {
+    background: #e23237;
+    color: #FFF;
+}

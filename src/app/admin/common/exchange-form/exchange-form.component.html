@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="columns">
+        <div class="column is-8 is-offset-2">
+            <form action="" novalidate autocomplete="off" (submit)="onSubmit($event)" [formGroup]="exchangeForm">
+                <div class="field">
+                    <div class="control">
+                        <input class="input" formControlName="amount" type="text" placeholder="monto a cambiar" />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" formControlName="currencyOrigin" type="text" placeholder="monto a cambiar" />
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <input class="input" formControlName="typeExchange" type="text" placeholder="4.0" />
+                    </div>
+                </div>
+                <div class="field is-grouped is-grouped-centered">
+                    <p class="control">
+                        <button type="button" class="button" (click)="onBack()">Regresar</button>
+                    </p>
+                    <p class="control">
+                        <button type="submit" class="button is-dark" [class.is-loading]="isLoading">Guardar</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
